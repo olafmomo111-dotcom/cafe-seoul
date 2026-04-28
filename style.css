@@ -1,0 +1,308 @@
+/* 先頭ページをヒーロー化（HTML変更なし） */
+header {
+  height: 100vh; /* 大きいビジュアルエリア */
+  background-image: url("images/韓国風カフェの白を基調とした内装（看板な.png"); /* ← 好きな画像に差し替え */
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  font-family: "Archivo Black", sans-serif;
+}
+
+/* タイトル（店名） */
+header h1 {
+  font-size: 5.5rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  padding-top: 40px;
+  margin-top: 5px;
+}
+
+header h1,
+header nav a {
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* ナビゲーション */
+header nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin-top: 25px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+/* About セクション */
+#about {
+  max-width: 800px;
+  margin: 120px auto; /* 余白たっぷりで上品に */
+  text-align: center;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  padding: 60px 20px;
+
+}
+
+#about h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  color: #333;
+  position: relative;
+}
+#about h2::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background: #ddd;
+  display: block;
+  margin: 12px auto 0;
+}
+
+#about p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #555;
+  letter-spacing: 0.3px;
+  line-height: 2.2;
+}
+
+.sp-br {
+  display: none;
+}
+
+/* セクション全体 */
+.menu {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* 3カラムのグリッド */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  align-items: start; /* 各カードの上を揃える */
+  justify-items: stretch; 
+}
+
+/* 画像をカード内で崩さず表示する */
+.menu-item img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 160px;
+  object-fit: cover; /* 切り抜きで埋めたいとき */
+  border-radius: 14px;
+}
+
+/* 各メニューカード */
+.menu-item {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(6px);
+}
+.menu-item {
+  padding: 10px;
+  text-align: center;
+}
+.menu-item h3 {
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+.price {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+#menu h2,
+#access h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+}
+
+#menu h2::after,
+#access h2::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background: #ddd;
+  display: block;
+  margin: 12px auto 0;
+}
+
+/* アクセス全体の背景と余白 */
+#access {
+  background: #f4eee7; /* ベージュ背景 */
+  padding:80px 20px;
+  text-align: center;
+  margin-top: 95px;
+}
+
+/* 見出し（About と同じ線） */
+#access h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #333;
+  margin:0 0 40px 0;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+#access h2::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background: #ddd;
+  display: block;
+  margin: 12px auto 0;
+}
+
+/* 3カラムのレイアウト */
+.access-grid {
+  max-width: 900px;
+  margin:0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* 各項目 */
+.access-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.access-item p {
+  line-height: 1.9;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.access-grid {
+  max-width: 900px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+
+
+footer {
+  background: #f4eee7; /* ベージュ系（韓国カフェっぽい） */
+  padding: 60px 20px; /* 余白たっぷりで上品に */
+  text-align: center;
+  color: #444; /* 文字は濃すぎないグレー */
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+/* ヒーローのタイトルを小さく */
+  header h1 {
+    padding: 0 16px;
+    font-size: 55px;
+  }
+
+  header nav {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* nav 全体を中央へ */
+  }
+
+  /* ナビゲーションを縦並びに */
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  header nav li {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+  /* About の余白を詰める */
+  #about {
+    margin: 60px auto;
+    padding: 40px 20px;
+  }
+
+  .sp-br {
+    display: inline;
+  }
+
+  #about p {
+    max-width: 90%;
+    margin: 0 auto 1.2em;
+    line-height: 2.3;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  /* メニューの見出しを詰める */
+  #menu h2 {
+    margin-bottom: 30px;
+  }
+
+  /* メニューを2列にする */
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* メニュー画像を少し小さく */
+  .menu-item img {
+    height: 130px;
+  }
+
+  /* メニュー文字の調整 */
+  .menu-item h3 {
+    font-size: 0.85rem;
+  }
+  .price {
+    font-size: 0.8rem;
+  }
+
+  /* アクセスの余白調整 */
+  #access {
+    padding: 60px 20px;
+    margin-top: 40px;
+  }
+
+  /* アクセスは1カラム */
+  .access-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* フッターの余白も少し詰める */
+  footer {
+    padding: 40px 20px;
+  }
+}
